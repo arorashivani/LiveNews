@@ -40,5 +40,5 @@ Meteor.startup(() => {
 });
 
 Meteor.publish("news",function(){
-  return news.find();
+  return News.find();
 });
