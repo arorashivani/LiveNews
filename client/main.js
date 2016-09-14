@@ -1,9 +1,9 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 
-import './main.html';
-import '../collections/news.js';
-import '../lib/methods.js'
+ import './main.html';
+// import '../collections/news.js';
+// import '../lib/methods.js'
 
 Meteor.subscribe("news");
 
@@ -11,8 +11,9 @@ Template.body.helpers({
   news : function () {
     return News.find();
   }
-  // TO DO permission for selected delete
 });
+
+
 Template.body.events({
   'submit .add-news':function (event) {
     var data = {};
@@ -29,6 +30,18 @@ Template.body.events({
   }
 });
 
+Template.newsList.helpers({
+  checkPermission : function () {
+
+    var user = Meteor.user();
+
+    if( user.username === this.author)
+    return true;
+    else {
+    return false;
+    }
+  }
+});
 Template.newsList.events({
   'click .delete' : function () {
     Meteor.call('deleteNews',this._id);
