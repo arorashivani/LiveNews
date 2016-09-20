@@ -67,6 +67,26 @@ ul {
   border-radius: 4px;;
 }
 
+.vote {
+  float: right;
+  font-weight: bold;
+  background: green;
+  color: #FFF;
+  font-size: 1em;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;;
+}
+.update {
+  float: right;
+  font-weight: bold;
+  background: teal;
+  color: #FFF;
+  font-size: 1em;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;;
+}
 li {
   position: relative;
   list-style: none;

@@ -1,9 +1,4 @@
-<head>
-  <title>LiveNews</title>
-</head>
-
-<body>
-
+<template name="MainLayout">
   <div class="container">
   <header>
     <h1> Live News</h1>
@@ -25,25 +20,4 @@
   {{/each}}
   </ul>
 </div>
-</body>
-
-
-<template name="newsList">
-    <li>
-      <span>
-      <a href={{url}}>{{title}}</a>
-      {{#if currentUser}}
-       <button class="vote">Vote</button>
-      {{/if}}
-
-       {{#if checkPermission}}
-      <a href="/update"> <button class="update">Comment</button></a>
-      {{/if}}
-    <h3>{{desc}}</h3>
-     <h4>By:{{author}}</h4>
-     <a href={{url}}>{{title}}</a>
-      {{#if checkPermission}}
-     <button class="delete">Remove</button>
-     {{/if}}</span>
-  </li>
 </template>

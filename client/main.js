@@ -9,7 +9,7 @@ Meteor.subscribe("news");
 
 Template.body.helpers({
   news : function () {
-    return News.find();
+    return News.find({},{sort:{createdAt:-1}});
   }
 });
 
@@ -19,7 +19,7 @@ Template.body.events({
     var data = {};
 
     data.title = event.target.title.value;
-    data.link = event.target.link.value;
+    data.url = event.target.link.value;
     data.description = event.target.description.value;
     data.author = event.target.author.value;
     Meteor.call('addNews',data);
