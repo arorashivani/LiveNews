@@ -1,23 +1,12 @@
+
 <template name="MainLayout">
   <div class="container">
   <header>
     <h1> Live News</h1>
     {{> loginButtons}}
-    {{#if currentUser}}
-          <form class="add-news">
-          <input type="text" name="title" placeholder="Title for the News">
-          <input type="text" name="link" placeholder="URL for the News">
-          <input type="hidden" name="author" value={{currentUser.username}}>
-          <input type="text" name="description" placeholder="Description for the News"><br><br>
-          <input type="submit" name="Submit"></form>
-      {{/if}}
-
-        </header>
-
-  <ul>
-  {{#each news}}
-    {{> newsList}}
-  {{/each}}
-  </ul>
+    </header>
+<main class="main-layout">
+  {{> Template.dynamic template=main}}
+</main>
 </div>
 </template>

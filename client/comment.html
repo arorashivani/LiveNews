@@ -1,0 +1,30 @@
+<template name="comment">
+
+<span>
+
+<h2><a href={{showNews.url}}>{{showNews.title}}</a></h2>
+{{#if currentUser}}
+ <button class="vote">Like</button>
+{{/if}}
+<h3>{{showNews.desc}}</h3>
+<h4>By:{{showNews.author}}</h4>
+
+{{#if checkPermission}}
+<button class="delete">Remove</button>
+{{/if}}
+
+</span>
+<ul>
+  {{#each showNews.comments}}
+  <li>
+    {{detail}} -- {{author}}
+  </li>
+  {{/each}}
+</ul>
+{{#if currentUser}}
+<form class="add-comments">
+<input type="text" name="comment" placeholder="add your comments">
+<input type="hidden" name="author" value={{currentUser.username}}>
+
+<input type="submit" name="Submit"></form>{{/if}}
+</template>

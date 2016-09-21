@@ -1,0 +1,25 @@
+<template name="newsList">
+    <li>
+      <span>
+      <a href={{url}}>{{title}}</a>
+      {{#if currentUser}}
+       <button class="vote">Like</button>
+       <button class="comment">Comment</button>
+      {{/if}}
+    <h3>{{desc}}</h3>
+     <h4>By:{{author}}</h4>
+     <p>
+       Comments:
+       <ul>
+         {{#each comments}}
+         <li>
+           {{detail}} -- {{author}}
+         </li>
+         {{/each}}
+       </ul>
+     </p>
+      {{#if checkPermission}}
+     <button class="delete">Remove</button>
+     {{/if}}</span>
+  </li>
+</template>

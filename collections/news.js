@@ -47,13 +47,7 @@ NewSchema = new SimpleSchema({
   },
   createdAt:{
     type : Date,
-    label:"Created At",
-    autoValue:function () {
-      return new Date()
-    },
-    autoform:{
-      type:"hidden"
-    }
+    label:"Created At"
   },
   comments:{
     type:[Comment],

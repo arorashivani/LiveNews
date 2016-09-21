@@ -1,0 +1,12 @@
+<template name="templayout">
+  
+  <span>
+  <a href="/addNews"><button class="add">Add News</button></a>
+  <br><br></span>
+
+  <ul>
+    {{#each news}}
+    {{> newsList}}
+    {{/each}}
+  </ul>
+</template>
