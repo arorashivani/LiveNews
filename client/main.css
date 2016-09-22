@@ -83,7 +83,17 @@ ul {
 .vote {
   float: right;
   font-weight: bold;
-  background: #2b82ad;
+  background: #0091cd;
+  color: #FFF;
+  font-size: 1em;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;;
+}
+.votelike {
+  float: right;
+  font-weight: bold;
+  background: #004b79;
   color: #FFF;
   font-size: 1em;
   padding: 5px 10px;
@@ -100,10 +110,40 @@ ul {
   border: none;
   border-radius: 4px;;
 }
+.liked {
+  float: left;
+  font-weight: bold;
+  background: #062f3c;
+  color: #FFF;
+  font-size: 1em;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;;
+}
+.discussed {
+  float: left;
+  font-weight: bold;
+  background: #062f3c;
+  color: #FFF;
+  font-size: 1em;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;;
+}
+.latest {
+  float: left;
+  font-weight: bold;
+  background: #062f3c;
+  color: #FFF;
+  font-size: 1em;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;;
+}
 .comment {
   float: right;
   font-weight: bold;
-  background: #062f3c;
+  background: #56a0d3;
   color: #FFF;
   font-size: 1em;
   padding: 5px 10px;
@@ -189,7 +229,7 @@ ul {
 .delete {
   float: right;
   font-weight: bold;
-  background: #cc7a00;
+  background: #red;
   color: #FFF;
   font-size: 1em;
   padding: 5px 10px;

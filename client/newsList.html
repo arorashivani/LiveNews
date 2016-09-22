@@ -1,25 +1,28 @@
 <template name="newsList">
-    <li>
-      <span>
+  <li>
+    <span>
       <a href={{url}}>{{title}}</a>
-      {{#if currentUser}}
-       <button class="vote">Like</button>
-       <button class="comment">Comment</button>
-      {{/if}}
-    <h3>{{desc}}</h3>
-     <h4>By:{{author}}</h4>
-     <p>
-       Comments:
-       <ul>
-         {{#each comments}}
-         <li>
-           {{detail}} -- {{author}}
-         </li>
-         {{/each}}
-       </ul>
-     </p>
       {{#if checkPermission}}
-     <button class="delete">Remove</button>
-     {{/if}}</span>
+      <button class="delete">Remove</button>
+      {{/if}}
+      {{#if currentUser}}
+
+      <button class={{checkVote}}>Likes({{votesCount}})</button>{{/if}}
+      <button class="comment">Comment</button>
+
+      <h3>{{desc}}</h3>
+      <h4>By:{{author}}</h4>
+
+      <p>
+        Comments({{commentsCount}}):
+        <ul>
+          {{#each comments}}
+          <li>
+            {{detail}} -- By:{{author}}
+          </li>
+          {{/each}}
+        </ul>
+      </p>
+    </span>
   </li>
 </template>

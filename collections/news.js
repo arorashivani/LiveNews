@@ -10,7 +10,7 @@ Comment = new SimpleSchema({
       type:String,
       label:"Author",
       autoValue:function () {
-        return Meteor.user().username;
+    //    return Meteor.user().username;
       },
       autoform:{
         type:"hidden"
@@ -39,7 +39,7 @@ NewSchema = new SimpleSchema({
     type:String,
     label:"Author",
     autoValue:function () {
-      return Meteor.user().username;
+    //  return Meteor.user().username;
     },
     autoform:{
       type:"hidden"
@@ -54,6 +54,15 @@ NewSchema = new SimpleSchema({
     optional:true
   },
   votes:{
+    type: [String],
+    optional:true
+  },
+  votesCount:{
+    type: SimpleSchema.Integer,
+    min: 0,
+    optional:true
+  },
+  commentsCount:{
     type: SimpleSchema.Integer,
     min: 0,
     optional:true
